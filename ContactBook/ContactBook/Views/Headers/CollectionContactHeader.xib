@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="CollectionContactHeader" customModule="ContactBook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNR-jg-jt8">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pv9-ko-PCK">
+                            <rect key="frame" x="18" y="14.666666666666664" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUc-Qk-tJq">
+                            <rect key="frame" x="227" y="7.6666666666666679" width="75" height="35"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <connections>
+                                <action selector="tappedButton" destination="U6b-Vx-4bR" eventType="touchUpInside" id="eIh-XY-TKf"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray2Color"/>
+                    <constraints>
+                        <constraint firstItem="CUc-Qk-tJq" firstAttribute="centerY" secondItem="mNR-jg-jt8" secondAttribute="centerY" id="UVz-Ij-psW"/>
+                        <constraint firstItem="Pv9-ko-PCK" firstAttribute="leading" secondItem="mNR-jg-jt8" secondAttribute="leading" constant="18" id="YZA-mc-UAy"/>
+                        <constraint firstItem="Pv9-ko-PCK" firstAttribute="centerY" secondItem="mNR-jg-jt8" secondAttribute="centerY" id="eA8-ou-qrb"/>
+                        <constraint firstAttribute="trailing" secondItem="CUc-Qk-tJq" secondAttribute="trailing" constant="18" id="z1U-OH-FBu"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="mNR-jg-jt8" secondAttribute="trailing" id="2Lg-1J-od8"/>
+                <constraint firstAttribute="bottom" secondItem="mNR-jg-jt8" secondAttribute="bottom" id="Mgs-lm-bKQ"/>
+                <constraint firstItem="mNR-jg-jt8" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="d2V-HO-a0Z"/>
+                <constraint firstItem="mNR-jg-jt8" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="jx0-Zx-dHv"/>
+            </constraints>
+            <connections>
+                <outlet property="colapseButton1" destination="CUc-Qk-tJq" id="iLv-DK-lIS"/>
+                <outlet property="header1" destination="Pv9-ko-PCK" id="4vf-MQ-uwc"/>
+            </connections>
+            <point key="canvasLocation" x="58" y="21"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
